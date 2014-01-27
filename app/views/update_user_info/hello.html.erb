@@ -1,0 +1,5 @@
+<%= form_for @user, :url => { :action => "upload" },:html => { :multipart => true }, do |f| %>
+	<%= f.label :image %> <br>
+	<%= f.file_field :profilePic %> <br>
+	<%= f.submit "submit" %>
+<% end %>

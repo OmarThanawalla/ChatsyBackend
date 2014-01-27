@@ -1,0 +1,6 @@
+<b> Are you sure you want to destory this record? </b>
+<%= form_for @user, :url => { :action => "destroy" },:method => "delete", :html => {:class => "nifty_form"} do |f| %>
+  <%=@user.first_name %>
+  <%=@user.last_name %>
+  <%= f.submit "Delete" %>
+<% end %>

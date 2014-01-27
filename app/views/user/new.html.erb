@@ -1,0 +1,14 @@
+
+
+<%= form_for @user, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
+<table>
+<tr><td>First Name</td><td><%= f.text_field :first_name %></td></tr>
+<tr><td>Last Name</td><td><%= f.text_field :last_name %></td></tr>
+<tr><td>Email</td><td><%= f.text_field :email %></td></tr>
+<tr><td>Password</td><td><%= f.text_field :hashed_password %></td></tr>
+<tr><td>Bio</td><td><%= f.text_field :Bio %></td></tr>
+<tr><td>Picture URL</td><td><%= f.text_field :pictureURL %></td></tr>
+<tr><td><%= f.submit "Create User" %></td></tr>
+
+</table>
+<% end %>

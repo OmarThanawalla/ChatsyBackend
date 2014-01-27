@@ -1,0 +1,26 @@
+<b> This is the login.html </b>
+
+
+
+<div class = "login">
+<%= flash[:notice] %>
+<%= form_tag(:action => "attempt_login") do %>
+<table>
+	<tr>
+		<td><%= label_tag(:email) %></td>
+		<td><%= text_field_tag(:email) %></td>
+	</tr>
+	<tr>
+		<td><%= label_tag(:password) %></td>
+		<td><%= password_field_tag(:password) %></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td><%= submit_tag("Log In") %></td>
+	</tr>
+</table>
+<% end %>
+</div>
+
+
+<p><%= link_to "Sign Up", :controller => "user", :action => "new"  %></p>
